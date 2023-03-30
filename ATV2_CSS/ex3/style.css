@@ -1,0 +1,46 @@
+div {
+	margin-bottom: 5px ;
+	display:flex;
+	justify-content: space-between;
+ }
+
+#l1>span:last-child{
+    background-color: red;
+}
+#l2{
+    color: green;
+}
+#l3{
+    color: blue;
+}
+#l4{
+    color: pink;
+}
+.N1{
+    color: yellow;
+}
+.N2{
+    color: orange;
+}
+.N3{
+    color:lightpink;
+}
+.N4{
+    color: darkred;
+}
+.N5{
+    color: gray;
+}
+.N6{
+    color: indigo;
+}
+span {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	width: 100px;
+  border: 1px solid black;
+  border-radius: 100%;
+  box-shadow: 3px 3px 3px rgba(153, 51, 153, 0.5);
+}
