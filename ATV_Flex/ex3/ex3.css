@@ -1,0 +1,21 @@
+.conteiner{
+    margin-right: 10%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+div{
+    border: 1px solid #000;
+}
+#div1{
+    height: 25vh;
+    width: 25vw;
+}
+#div2{
+    height: 25vh;
+    width: 25vw;
+}
+#div3{
+    height: 50vh;
+    width: 50vw;
+}
