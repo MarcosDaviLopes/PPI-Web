@@ -1,0 +1,21 @@
+body{
+    display: flex;
+}
+div{
+    border: 1px solid black;
+}
+#DF{
+    border: 1px solid black;
+    width: 25vw;
+    height: 100vh;
+}
+#DS1{
+    margin: 5px;
+    margin-right: 5px;
+    height: 150px;
+    width: 150px;
+}
+#DS2{
+    height: 100vh;
+    width: 100vw;
+}

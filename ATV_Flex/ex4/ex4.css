@@ -1,0 +1,9 @@
+body{
+    display: flex;
+}
+div{
+    border: 1px solid black;
+    text-align: center;
+    width: 25vw;
+    height: 100vh;
+}
