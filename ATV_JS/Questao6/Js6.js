@@ -1,8 +1,8 @@
 function adicionarItem() {
     var texto = document.getElementById("texto").value;
-    var novoItem = document.createElement("li");
+    var linha = document.createElement("li");
     var textoItem = document.createTextNode(texto);
-    novoItem.appendChild(textoItem);
-    document.getElementById("lista").appendChild(novoItem);
+    linha.appendChild(textoItem);
+    document.getElementById("lista").appendChild(linha);
     document.getElementById("texto").value = "";
 }

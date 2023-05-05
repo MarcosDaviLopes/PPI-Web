@@ -1,9 +1,9 @@
-function mudarPosicao() {
+function muda() {
     var botao = document.getElementById("botao");
-    var larguraJanela = window.innerWidth;
-    var alturaJanela = window.innerHeight;
-    var novaPosicaoX = Math.floor(Math.random() * (larguraJanela - botao.offsetWidth));
-    var novaPosicaoY = Math.floor(Math.random() * (alturaJanela - botao.offsetHeight));
-    botao.style.left = novaPosicaoX + "px";
-    botao.style.top = novaPosicaoY + "px";
+    var largura = window.innerWidth;
+    var altura = window.innerHeight;
+    var PX = Math.floor(Math.random() * (largura - botao.offsetWidth));
+    var PY = Math.floor(Math.random() * (altura - botao.offsetHeight));
+    botao.style.left = PX + "px";
+    botao.style.top = PY + "px";
 }
