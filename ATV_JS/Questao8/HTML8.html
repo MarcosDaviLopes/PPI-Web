@@ -6,18 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 8</title>
     <script src="Js8.js"></script>
+	<style>
+
+		body{
+			display: flex;
+			width: 100vh;
+			height: 100vh;
+			flex-direction: column;
+			background-image: url(./terra.jpg);
+			background-attachment: fixed;
+		}
+
+		#palavras{
+			font-family: 'Times New Roman', Times, serif;
+		}
+		h1{
+			align-items: center;
+			margin-right: 10px;
+		}
+		p{
+			margin-right: 10vh;
+			font-size: 30px;
+		}
+		label{
+			font-size: 40px;
+		}
+		input{
+			border-radius: 15px;
+			align-items: center;
+		}
+
+	</style>
 </head>
 <body>
     
-	<h1>Conversor de Temperatura</h1>
-	<p>Insira um valor em um dos campos abaixo e saia do campo para converter para as outras unidades de temperatura:</p>
-	<label for="celsius">Celsius:</label>
+	<h1 class="palavras">Conversor de Temperatura</h1>
+	<p class="palavras">Insira um valor em um dos campos abaixo e saia do campo para converter para as outras unidades de temperatura:</p>
+	<label for="celsius" class="palavras">Celsius:</label>
 	<input type="number" id="celsius" onblur="convert()">
 	<br>
-	<label for="kelvin">Kelvin:</label>
+	<label for="kelvin" class="palavras">Kelvin:</label>
 	<input type="number" id="kelvin" onblur="convert()">
 	<br>
-	<label for="fahrenheit">Fahrenheit:</label>
+	<label for="fahrenheit" class="palavras">Fahrenheit:</label>
 	<input type="number" id="fahrenheit" onblur="convert()">
 </body>
 </html>
