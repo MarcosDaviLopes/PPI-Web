@@ -1,20 +1,33 @@
-function convert() {
-    var celsius = document.getElementById("celsius").value;
-    var kelvin = document.getElementById("kelvin").value;
-    var fahrenheit = document.getElementById("fahrenheit").value;
+function converterTemperaturaC() {
+    let temperatura = parseFloat(document.getElementById("Celsius").value);
 
-    if (celsius != "") {
-        kelvin = parseFloat(celsius) + 273.15;
-        fahrenheit = (parseFloat(celsius) * 1.8) + 32;
-    } else if (kelvin != "") {
-        celsius = parseFloat(kelvin) - 273.15;
-        fahrenheit = (parseFloat(kelvin) - 273.15) * 1.8 + 32;
-    } else if (fahrenheit != "") {
-        celsius = (parseFloat(fahrenheit) - 32) / 1.8;
-        kelvin = (parseFloat(fahrenheit) + 459.67) / 1.8;
-    }
+    let temperatura_kelvin;
+    let temperatura_fahrenheit;
+    temperatura_kelvin = temperatura + 273.15;
+    temperatura_fahrenheit = temperatura * 1.8 + 32;
+        
+    document.getElementById("kelvin").value = temperatura_kelvin.toFixed(2);
+    document.getElementById("fahrenheit").value = temperatura_fahrenheit.toFixed(2);
+}
+function converterTemperaturaK() {
+    let temperatura = parseFloat(document.getElementById("kelvin").value);
 
-    document.getElementById("celsius").value = celsius.toFixed(2);
-    document.getElementById("kelvin").value = kelvin.toFixed(2);
-    document.getElementById("fahrenheit").value = fahrenheit.toFixed(2);
+    let temperatura_celsius;
+    let temperatura_fahrenheit;
+    temperatura_celsius = temperatura - 273.15;
+    temperatura_fahrenheit = (temperatura-273)*1.8+32;
+        
+    document.getElementById("Celsius").value = temperatura_celsius.toFixed(2);
+    document.getElementById("fahrenheit").value = temperatura_fahrenheit.toFixed(2);
+}
+function converterTemperaturaF() {
+    let temperatura = parseFloat(document.getElementById("fahrenheit").value);
+
+    let temperatura_kelvin;
+    let temperatura_fahrenheit;
+    temperatura_celsius = (temperatura-32)/1.8;
+    temperatura_kelvin = (temperatura-32)*(5/9) + 273,15;
+        
+    document.getElementById("Celsius").value = temperatura_celsius.toFixed(2);
+    document.getElementById("kelvin").value = temperatura_kelvin.toFixed(2);
 }

@@ -13,7 +13,7 @@
 			width: 100vh;
 			height: 100vh;
 			flex-direction: column;
-			background-image: url(./terra.jpg);
+			background-color: pink;
 			background-attachment: fixed;
 		}
 
@@ -34,21 +34,28 @@
 		input{
 			border-radius: 15px;
 			align-items: center;
+			size: 15px;
 		}
 
 	</style>
 </head>
 <body>
-    
-	<h1 class="palavras">Conversor de Temperatura</h1>
-	<p class="palavras">Insira um valor em um dos campos abaixo e saia do campo para converter para as outras unidades de temperatura:</p>
-	<label for="celsius" class="palavras">Celsius:</label>
-	<input type="number" id="celsius" onblur="convert()">
-	<br>
-	<label for="kelvin" class="palavras">Kelvin:</label>
-	<input type="number" id="kelvin" onblur="convert()">
-	<br>
-	<label for="fahrenheit" class="palavras">Fahrenheit:</label>
-	<input type="number" id="fahrenheit" onblur="convert()">
+	<h1>Conversor de temperatura</h1>
+	
+	<p>
+		<label>Temperatura em Celsius:</label>
+		<input type="number" id="Celsius" step="0.01" required onmouseleave="converterTemperaturaC()">
+	
+    </p>
+
+	<p>
+		<label>Temperatura em Kelvin:</label>
+		<input type="number" id="kelvin" step="0.01" required onmouseleave="converterTemperaturaK()">
+	</p>
+	
+	<p>
+		<label>Temperatura em Fahrenheit:</label>
+		<input type="number" id="fahrenheit" required onmouseleave="converterTemperaturaF()">
+	</p>
 </body>
 </html>
