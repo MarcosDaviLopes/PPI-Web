@@ -4,7 +4,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #cc1f1fa6;
     font-family: Arial, sans-serif;
 }
 
@@ -69,5 +69,5 @@ body {
 }
 #limpar{
     margin-top: 5px;
-    width: 50vw;
+    width: 270px;
 }
