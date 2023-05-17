@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.campo{
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 480px;
+    width: 280px;
+    transition: all 0.3s ease;
+    background-color: white;
+    border-radius: 50px;
+    filter: brightness(1);
+}
+
+.img{
+    height: 480px;
+    width: 280px;
+    border-radius: 50px;
+    position: absolute;
+}
+.img:hover{
+    filter: brightness(0.7);
+    background-color: gray;
+
+}
+button{
+    width: 80px;
+    height: 60px;
+    background-color: blueviolet;
+    opacity: 0;
+    z-index: 1;
+}
+button:hover{
+    opacity: 1;
+}

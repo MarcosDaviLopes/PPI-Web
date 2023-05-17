@@ -1,0 +1,30 @@
+#bandeira{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 350px;
+    border: 2px solid black;
+    box-shadow: 5px solid black;
+}
+
+#red{
+    width: 150px;
+    height: 150px;
+    background: red;
+    border-radius: 100%;
+}
