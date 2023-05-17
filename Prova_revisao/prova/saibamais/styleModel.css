@@ -7,34 +7,31 @@
 .campo{
     border: 5px solid black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 480px;
-    width: 280px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(user.png);
+    height: 50%;
+    width: 25%;
     transition: all 0.3s ease;
     background-color: white;
     border-radius: 50px;
     filter: brightness(1);
 }
-
-.img{
-    height: 480px;
-    width: 280px;
-    border-radius: 50px;
-    position: absolute;
-}
-.img:hover{
-    filter: brightness(0.7);
-    background-color: gray;
-
+.campo:hover{
+    opacity: 0.4;
 }
 button{
     width: 80px;
     height: 60px;
     background-color: blueviolet;
     opacity: 0;
-    z-index: 1;
+    border-radius: 25%;
 }
 button:hover{
     opacity: 1;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
 }
