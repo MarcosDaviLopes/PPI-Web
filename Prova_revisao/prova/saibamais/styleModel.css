@@ -16,12 +16,14 @@
     height: 50%;
     width: 25%;
     transition: all 0.3s ease;
-    background-color: white;
+    background-color: black;
     border-radius: 50px;
     filter: brightness(1);
+    opacity: 1;
 }
 .campo:hover{
-    opacity: 0.4;
+    opacity: 2;
+    filter: brightness(0.5);
 }
 button{
     width: 80px;
@@ -32,6 +34,7 @@ button{
 }
 button:hover{
     opacity: 1;
+    filter: brightness();
     transition: 1s;
     transition-timing-function: ease-in-out;
 }
