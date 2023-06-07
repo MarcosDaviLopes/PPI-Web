@@ -13,32 +13,53 @@
             return  $con;
         }
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $PDC = false;
+        if (isset($_POST["nome"] && isset($_POST['email']) && isset($_POST['senha']))){
+             $nome = $_POST["nome"];
+            $email = $_POST["email"];
+            $senha = $_POST["senha"];
 
-        if (isset($_POST["nome"]))
-        $nome = $_POST["nome"];
-        $email = $_POST["email"];
-        $senha = $_POST["senha"];
+            function inserUser($nome,$email,$senha){
+                try{
+                $con = conectaBD();
+                $con->setAttibute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        function inserUser($nome,$email,$senha){
-            try{
-            $con = conectaBD();
-            $con->setAttibute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $sql = "INSERT INTO usuario (nome,login,senha)VALUE(?,?,?)";
+                $stm = $con->prepare($sql);
 
-            $sql = "INSERT INTO usuario (nome,login,senha)VALUE(?,?,?)";
-            $stm = $con->prepare($sql);
-
-            $stm->bindParam(1,$nome);
-            $stm->bindParam(2,$email);
-            $stm->bindParam(3,$senha);
-            $stm->execute();
+                $stm->bindParam(1,$nome);
+                $stm->bindParam(2,$email);
+                $stm->bindParam(3,$senha);
+                $stm->execute();
             }catch(PDOException $e){
                 echo 'ERROR: ' . $e->getMessage();
             }
             return $con->lastInsertId();
         }
+        }
+
+       
 
         inserUser($nome,$email,$senha);
-    }
+
+      
+        if(empty($_POST['nome'] && empty($_POST['email'] && empty($_POST['senha'])))){
+                echo 'Algum dos campos não foi preenchido'
+        }else{
+                $PDC = true
+        }
+        
+        if ($PDC ==  true){
+            echo "<script>setTimeout(
+                function(){
+                    window.location.href='index.php'},5000
+                );
+        </script>";
+        }else{
+            inserUser($nome,$email,$senha);
+        }
+        }
+
 
     ?>
         <form method="POST">

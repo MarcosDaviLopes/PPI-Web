@@ -52,6 +52,7 @@
         margin-top: 5px;
         width: 100%;
         border: none;
+        border-radius: 4px;
         color: #fff;
         font-size: 13pt;
     }
@@ -59,6 +60,14 @@
         background-color: #45a049;
     }
   </style>
+  <?php 
+    function cad(){
+      echo "<script>setTimeout(
+                function(){
+                  window.location.href='sing_in.php'},5000
+                );
+            </script>"}
+  ?>
 </head>
 <body>
   <div class="container">
@@ -68,9 +77,11 @@
       <input type="password" placeholder="Password" name="senha" id="password">
       <input type="submit" value="Login">
     </form>
-    <form action="sing_in.php">
-        <input type="button" value="Cadastre-se">
+    <form action="cad">
+      <input type="submit" value="Cadastre-se">
     </form>
+        
+
   </div>
 </body>
 </html>
