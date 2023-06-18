@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aula 29 03.css">
+    <style>
+        * {
+            margin: 1px;
+            padding: 0px;
+        }
+
+        .display {
+            margin: 10px;
+            display: flex;
+            border: 1px solid black;
+            height: 30pt;
+            width: 80vw;
+            justify-content: flex-end;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input {
+            font-size: 30pt;
+        }
+
+        .button {
+            margin: 10px;
+            display: grid;
+            width: 80vw;
+            height: 80vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .tecla {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30pt;
+            box-shadow: 0px 0px 5px 5px rgba(200, 200, 200, 0.9);
+        }
+    </style>
+    <title>Calculadora</title>
+</head>
+
+<body class="container">
+    <input type="text" class="display" readonly>
+    <div class="button">
+        <button id="num-7">7</button>
+        <button id="num-8">8</button>
+        <button id="num-9">9</button>
+        <button id="op-div">/</button>
+        <button id="num-4">4</button>
+        <button id="num-5">5</button>
+        <button id="num-6">6</button>
+        <button id="op-mult">*</button>
+        <button id="num-1">1</button>
+        <button id="num-2">2</button>
+        <button id="num-3">3</button>
+        <button id="op-sub">-</button>
+        <button id="num-0">0</button>
+        <button id="dec">.</button>
+        <button id="op-eq">=</button>
+        <button id="op-sum">+</button>
+        <button id="limpar">Clear</button>
+    </div>
+
+    <script>
+        // Selecionando os elementos HTML relevantes
+        const display = document.querySelector('.display');
+        const clearButton = document.querySelector('#limpar');
+        const numberButtons = document.querySelectorAll('[id^=num]');
+        const operatorButtons = document.querySelectorAll('[id^=op]');
+        const decimalButton = document.querySelector('#dec');
+        const equalsButton = document.querySelector('#op-eq');
+
+        // Variáveis auxiliares
+        let currentNumber = '';
+        let previousNumber = '';
+        let currentOperation = null;
+
+        // Função que atualiza o display da calculadora
+        function updateDisplay(value) {
+            display.value = value;
+        }
+
+        // Função que limpa a entrada atual
+        function

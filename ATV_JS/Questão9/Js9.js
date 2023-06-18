@@ -8,5 +8,7 @@ function printArray() {
       item.className = "item";
       item.textContent = array[i].trim();
       output.appendChild(item);
+      
     }
+    input.value = '';
   }
