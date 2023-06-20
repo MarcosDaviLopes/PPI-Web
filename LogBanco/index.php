@@ -46,28 +46,22 @@
     .container input[type="submit"]:hover {
       background-color: #45a049;
     }
-    input[type="button"]{
+    a{
+        display: flex;
         background-color: #4CAF50;
-        align-items: center;
-        margin-top: 5px;
-        width: 100%;
+        align-items:center;
+        margin-top: 20px;
+        width: max-content;
         border: none;
         border-radius: 4px;
         color: #fff;
         font-size: 13pt;
     }
-    input[type="button"]:hover{
+    a:hover{
         background-color: #45a049;
     }
   </style>
-  <?php 
-    function cad(){
-      echo "<script>setTimeout(
-                function(){
-                  window.location.href='sing_in.php'},5000
-                );
-            </script>"}
-  ?>
+
 </head>
 <body>
   <div class="container">
@@ -78,7 +72,7 @@
       <input type="submit" value="Login">
     </form>
     <form action="cad">
-      <a href = "sing_in.php"> Cadastre-se</a>
+      <a href = "sing_in.php"> Cadastre-se </a>
     </form>
         
 

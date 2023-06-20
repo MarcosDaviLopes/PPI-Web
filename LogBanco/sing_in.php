@@ -54,7 +54,7 @@
         }
         
         if ($PDC ==  true){
-            echo "<script>setTimeout(
+             "<script>setTimeout(
                 function(){
                     window.location.href='index.php'},5000
                 );
