@@ -78,7 +78,7 @@
       <input type="submit" value="Login">
     </form>
     <form action="cad">
-      <input type="submit" value="Cadastre-se">
+      <a href = "sing_in.php"> Cadastre-se</a>
     </form>
         
 

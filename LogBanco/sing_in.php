@@ -8,10 +8,14 @@
 </head>
 <body>
     <?php
+
+
         function conectaBD(){
             $con=new PDO("mysql:host=localhost;dbname=web","root","aluno");
             return  $con;
         }
+
+        
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $PDC = false;
         if (isset($_POST["nome"] && isset($_POST['email']) && isset($_POST['senha']))){
