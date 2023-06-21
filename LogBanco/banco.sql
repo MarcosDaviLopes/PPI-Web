@@ -7,9 +7,10 @@ CREATE TABLE usuarios (
   nome VARCHAR(100) NOT NULL,
   telefone VARCHAR(20) NOT NULL,
   email VARCHAR(100) NOT NULL,
+  senha VARCHAR(100) NOT NULL,
   data_nascimento DATE NOT NULL
 );
 
-INSERT INTO usuarios (nome, telefone, email, data_nascimento) VALUES
-  ('João', '123456789', 'joao@example.com', '1990-01-01'),
-  ('Maria', '987654321', 'maria@example.com', '1995-02-15');
+INSERT INTO usuarios (nome, telefone, email, senha, data_nascimento) VALUES
+  ('João', '123456789', 'joao@gmail.com', '123', '1990-01-01'),
+  ('Maria', '987654321', 'maria@gmail.com', 'Maria','1995-02-15');

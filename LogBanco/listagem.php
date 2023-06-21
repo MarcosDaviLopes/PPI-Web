@@ -20,17 +20,8 @@
   
   if (empty($usuarios)) {
     echo "Nenhum usuário encontrado";
-    ?>
-    <table>
-      <tr>
-        <th>Código</th>
-        <th>Nome</th>
-        <th>Telefone</th>
-        <th>Data de Nascimento</th>
-        <th>Ação</th>
-      </tr>
-      <?php
-      foreach ($usuarios as $usuario) {
+    } else {
+    foreach ($usuarios as $usuario) {
         ?>
         <tr>
           <td><?php echo $usuario['codigo']; ?></td>
@@ -44,12 +35,15 @@
         </tr>
         <?php
       }
-      ?>
+  }?>
+    <table>
+      <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Data de Nascimento</th>
+        <th>Ação</th>
+      </tr>
     </table>
-    <?php
-  } else {
-    echo "Nenhum usuário encontrado.";
-  }
-  ?>
 </body>
 </html>
