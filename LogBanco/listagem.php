@@ -2,17 +2,7 @@
 <html>
 <head>
   <title>Dados dos Usuários</title>
-
-  <style>
-    table {
-      border-collapse: collapse;
-    }
-    
-    th, td {
-      border: 1px solid black;
-      padding: 8px;
-    }
-  </style>
+  <link rel="stylesheet" href="listagemE.css">
 </head>
 
 <body>
@@ -28,7 +18,8 @@
   
   $usuarios = recuperaALL();
   
-  if (!empty($usuarios)) {
+  if (empty($usuarios)) {
+    echo "Nenhum usuário encontrado";
     ?>
     <table>
       <tr>
@@ -47,7 +38,8 @@
           <td><?php echo $usuario['telefone']; ?></td>
           <td><?php echo $usuario['data_nascimento']; ?></td>
           <td>
-            <button>Edit</button>
+            <button>Edite</button>
+            <button>Delete</button>
           </td>
         </tr>
         <?php

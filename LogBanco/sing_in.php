@@ -11,14 +11,14 @@
 
 
         function conectaBD(){
-            $con=new PDO("mysql:host=localhost;dbname=web","root","aluno");
+            $con=new PDO("mysql:host=localhost;dbname=Usuarios","root","aluno");
             return  $con;
         }
 
         
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $PDC = false;
-        if (isset($_POST["nome"] && isset($_POST['email']) && isset($_POST['senha']))){
+        if (isset($_POST["nome"]) && isset($_POST['email']) && isset($_POST['senha'])){
              $nome = $_POST["nome"];
             $email = $_POST["email"];
             $senha = $_POST["senha"];
@@ -48,9 +48,9 @@
 
       
         if(empty($_POST['nome'] && empty($_POST['email'] && empty($_POST['senha'])))){
-                echo 'Algum dos campos não foi preenchido'
+                echo 'Algum dos campos não foi preenchido';
         }else{
-                $PDC = true
+                $PDC = true;
         }
         
         if ($PDC ==  true){
