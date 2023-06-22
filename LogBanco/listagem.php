@@ -7,6 +7,11 @@
 
 <body>
   <?php
+  function conectaBD()
+  {
+      $con = new PDO("mysql:host=localhost;dbname=Usuarios", "root", "aluno");
+      return $con;
+  }
   function recuperaALL(){
     $con = conectaBD();
     $sql = "SELECT * FROM usuario";
@@ -21,22 +26,8 @@
   if (empty($usuarios)) {
     echo "Nenhum usuário encontrado";
     } else {
-    foreach ($usuarios as $usuario) {
-        ?>
-        <tr>
-          <td><?php echo $usuario['codigo']; ?></td>
-          <td><?php echo $usuario['nome']; ?></td>
-          <td><?php echo $usuario['telefone']; ?></td>
-          <td><?php echo $usuario['data_nascimento']; ?></td>
-          <td>
-            <button>Edite</button>
-            <button>Delete</button>
-          </td>
-        </tr>
-        <?php
-      }
-  }?>
-    <table>
+      ?>
+      <table>
       <tr>
         <th>Código</th>
         <th>Nome</th>
@@ -45,5 +36,22 @@
         <th>Ação</th>
       </tr>
     </table>
+
+    <?php
+    foreach ($usuarios as $usuario) {
+        ?>
+        <tr>
+          <td><?php echo $usuario['id']; ?></td>
+          <td><?php echo $usuario['nome']; ?></td>
+          <td><?php echo $usuario['telefone']; ?></td>
+          <td>
+            <button>Edite</button>
+            <button>Delete</button>
+          </td>
+        </tr>
+        <?php
+      }
+  }?>
+    
 </body>
 </html>

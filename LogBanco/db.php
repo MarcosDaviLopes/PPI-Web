@@ -1,7 +1,7 @@
 <?php
 
     function conectaBD(){
-        $con=new PDO("mysql:host=localhost;dbname=web","root","aluno");
+        $con=new PDO("mysql:host=localhost;dbname=usuarios","root","aluno");
         return  $con;
     }
     function inserUsuario($nome,$email,$senha){

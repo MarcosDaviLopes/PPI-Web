@@ -66,9 +66,9 @@
 <body>
   <div class="container">
     <h2>Login</h2>
-    <form id = "formlogin" action="verificaLOG" method = "POST">
-      <input type="text" placeholder="Login" name="email" id="email">
-      <input type="password" placeholder="Password" name="senha" id="password">
+    <form id = "formlogin" action="verificaLOG.php" method = "POST">
+      <input type="text" placeholder="Email" name="email" id="email">
+      <input type="password" placeholder="Senha" name="senha" id="password">
       <input type="submit" value="Login">
     </form>
     <form action="cad">
