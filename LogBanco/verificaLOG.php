@@ -1,4 +1,13 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="verifica.css">
+    <title>Document</title>
+</head>
+<body>
+    <?php
 function conectaBD()
 {
     $con = new PDO("mysql:host=localhost;dbname=usuarios", "root", "aluno");
@@ -24,7 +33,7 @@ function verificar_login(){
         $result = $stm->fetchAll(PDO::FETCH_ASSOC);
         
         if ($result) {
-            echo "Login efetuado com sucesso";
+            echo '<p class="success-message">Login efetuado com sucesso</p>';
             session_start();
             $_SESSION['login'] = $login;
             
@@ -33,7 +42,7 @@ function verificar_login(){
             }, 5000);</script>";
 
         } else {
-            echo 'Login ou senha incorretos';
+            echo '<p class="error-message">Login ou senha incorretos</p>';
         }
     } catch (PDOException $e) {
         echo 'ERROR: ' . $e->getMessage();
@@ -42,3 +51,5 @@ function verificar_login(){
 
 verificar_login();
 ?>
+</body>
+</html>

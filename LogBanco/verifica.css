@@ -1,0 +1,27 @@
+
+body{
+    background-color: #1fc5bd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+}
+.success-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    background-color: #f2dede;
+    color: #a94442;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  

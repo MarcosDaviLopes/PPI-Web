@@ -50,32 +50,35 @@ function inserUser($nome, $telefone, $email, $senha, $senhaCon)
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sing.css">
-    <title>Cadastrar</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sing.css">
+  <title>Cadastrar</title>
 </head>
 <body>
+  <div class="container">
+    <h1>Cadastre-se</h1>
     <form method="POST">
-        <label>Nome:</label>
-        <input type="text" name="nome" placeholder="Nome">
-        <br><br>
+      <label>Nome:</label>
+      <input type="text" name="nome" placeholder="Nome">
+      <br><br>
 
-        <label>Telefone</label>
-        <input type="number_format" name="telefone" placeholder="Telefone">
-        <br><br>
+      <label>Telefone</label>
+      <input type="number_format" name="telefone" placeholder="Telefone">
+      <br><br>
 
-        <label>Email:</label>
-        <input type="text" name="Email" placeholder="Email"><br><br>
+      <label>Email:</label>
+      <input type="text" name="Email" placeholder="Email"><br><br>
 
-        <label>Senha:</label>
-        <input type="password" name="senha"><br><br>
+      <label>Senha:</label>
+      <input type="password" name="senha" placeholder="Senha"><br><br>
 
-        <label>Confirmar Senha:</label>
-        <input type="password" name="confirmaSenha"> <br><br>
+      <label>Confirmar Senha:</label>
+      <input type="password" name="confirmaSenha" placeholder="Repita senha"> <br><br>
 
-        <input type="submit" name="submit" value="Cadastrar">
+      <input type="submit" name="submit" value="Cadastrar">
     </form>
+  </div>
 </body>
 </html>

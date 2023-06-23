@@ -5,7 +5,11 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #547acc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
     
     .container {
@@ -46,36 +50,37 @@
     .container input[type="submit"]:hover {
       background-color: #45a049;
     }
-    a{
-        display: flex;
-        background-color: #4CAF50;
-        align-items:center;
-        margin-top: 20px;
-        width: max-content;
-        border: none;
-        border-radius: 4px;
-        color: #fff;
-        font-size: 13pt;
+    
+    a {
+      display: flex;
+      background-color: #4CAF50;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      width: max-content;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 13pt;
+      text-decoration: none;
     }
-    a:hover{
-        background-color: #45a049;
+    
+    a:hover {
+      background-color: #45a049;
     }
   </style>
-
 </head>
 <body>
   <div class="container">
     <h2>Login</h2>
-    <form id = "formlogin" action="verificaLOG.php" method = "POST">
+    <form id="formlogin" action="verificaLOG.php" method="POST">
       <input type="text" placeholder="Email" name="email" id="email">
       <input type="password" placeholder="Senha" name="senha" id="password">
       <input type="submit" value="Login">
     </form>
     <form action="cad">
-      <a href = "singIn.php"> Cadastre-se </a>
+      <a href="singIn.php">Cadastre-se</a>
     </form>
-        
-
   </div>
 </body>
 </html>
