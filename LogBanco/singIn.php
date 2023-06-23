@@ -63,7 +63,7 @@ function inserUser($nome, $telefone, $email, $senha, $senhaCon)
         <br><br>
 
         <label>Telefone</label>
-        <input type="text" name="telefone" placeholder="Telefone">
+        <input type="number_format" name="telefone" placeholder="Telefone">
         <br><br>
 
         <label>Email:</label>

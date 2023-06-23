@@ -7,8 +7,7 @@
 
 <body>
   <?php
-  function conectaBD()
-  {
+  function conectaBD(){
       $con = new PDO("mysql:host=localhost;dbname=Usuarios", "root", "aluno");
       return $con;
   }
@@ -23,6 +22,39 @@
   
   $usuarios = recuperaALL();
   
+  function deletarUsuario($id){
+    $con = conectaBD();
+    
+    // Deleta o usuário com o ID fornecido
+    $sql = "DELETE FROM usuario WHERE id = :id";
+    $stm = $con->prepare($sql);
+    $stm->bindParam(':id', $id, PDO::PARAM_INT);
+    
+    if ($stm->execute()) {
+        echo "Usuário deletado com sucesso";
+    } else {
+        echo "Erro ao deletar o usuário";
+    }
+}
+
+  function editarUsuario($id){
+    $con = conectaBD();
+    
+    // Recupera os dados do usuário com o ID fornecido
+    $sql = "SELECT * FROM usuario WHERE id = :id";
+    $stm = $con->prepare($sql);
+    $stm->bindParam(':id', $id, PDO::PARAM_INT);
+    $stm->execute();
+    $usuario = $stm->fetch(PDO::FETCH_ASSOC);
+
+    if ($usuario) {
+        header("Location: editUser.php?id=" . $id);
+        exit();
+    } else {
+        echo "Usuário não encontrado";
+    }
+}
+
   if (empty($usuarios)) {
     echo "Nenhum usuário encontrado";
     } else {
@@ -32,10 +64,8 @@
         <th>Código</th>
         <th>Nome</th>
         <th>Telefone</th>
-        <th>Data de Nascimento</th>
         <th>Ação</th>
       </tr>
-    </table>
 
     <?php
     foreach ($usuarios as $usuario) {
@@ -45,13 +75,15 @@
           <td><?php echo $usuario['nome']; ?></td>
           <td><?php echo $usuario['telefone']; ?></td>
           <td>
-            <button>Edite</button>
-            <button>Delete</button>
+            <button onclick="editarUsuario(<?php echo $usuario['id']; ?>)">Editar</button>
+            <button onclick="deletarUsuario(<?php echo $usuario['id']; ?>)">Deletar</button>
           </td>
         </tr>
+        <br>
         <?php
       }
-  }?>
+  }?> 
+      </table>
     
 </body>
 </html>

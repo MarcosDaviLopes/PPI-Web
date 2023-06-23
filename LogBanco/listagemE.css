@@ -1,15 +1,28 @@
 table {
-    width: 100%;
+    justify-items: center;
+    align-items: center;
+    width: 25%;
     border-collapse: collapse;
-  }
+}
   
-  th, td {
+th {
     padding: 8px;
-    text-align: left;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 15%;
+    text-align: center;
     border-bottom: 1px solid #ddd;
-  }
+}
   
-  button {
+td {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
     padding: 6px 12px;
     background-color: #4CAF50;
     color: white;
@@ -17,35 +30,37 @@ table {
     border-radius: 4px;
     cursor: pointer;
     margin-right: 4px;
-  }
+}
   
   /* Estilos para a mensagem de nenhum usuário encontrado */
-  .no-users {
+.no-users {
     margin: 16px;
     font-size: 18px;
     color: #FF0000;
-  }
-  
+}
+
   /* Estilos para o título da página */
-  h1 {
+h1 {
     text-align: center;
     margin-top: 20px;
-  }
+}
   
   /* Estilos gerais */
-  body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
-  }
+    display: flex;
+    align-items: center;
+}
   
   /* Ajustes para a tabela */
-  td {
+td {
     vertical-align: middle;
-  }
+}
   
-  td button {
+td button {
     margin: 0;
-  }
+}
   
